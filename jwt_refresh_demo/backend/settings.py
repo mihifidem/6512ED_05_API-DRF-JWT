@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages', 'django.contrib.staticfiles',
     'rest_framework', 'accounts',
     'corsheaders',
+      'projects',
 
 
 
@@ -135,7 +136,7 @@ REST_FRAMEWORK = {
 
 from datetime import timedelta
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(seconds=20),  # expira rápido (ejemplo)
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=20),  # expira rápido (ejemplo)
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
     "ROTATE_REFRESH_TOKENS": True,  # genera nuevos refresh al renovar
 }
